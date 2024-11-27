@@ -1,0 +1,74 @@
+.header {
+    height: 160px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo {
+    width: 370px;
+    height: 180;
+    margin-top: 20px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.loginDiv {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.authBtnsDiv {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.signUp {
+    background-color: #DEC2A0;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLinkDiv {
+    display: flex;
+    margin-top: 40px;
+}
+
+.navLink {
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.navLink:nth-child(1) {
+    font-weight: bold;
+}
+
+.active {
+    border-bottom: 2px solid #DEC2A0;
+}
+
+.language {
+    margin-right: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow{
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+}

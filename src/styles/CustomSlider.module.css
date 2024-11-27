@@ -1,0 +1,77 @@
+.sliderWrapper {
+    width: 85%;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif; 
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: #dcb894;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    z-index: 2;
+}
+
+.prev {
+    left: calc(50% - 80px);
+    bottom: 1px;
+}
+
+.next {
+    right: calc(50% - 120px);
+    bottom: 1px;
+}
+
+.sliderElement {
+    width: 300px;
+}
+
+.customDots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.customDots li {
+    list-style: none;   
+}
+
+.dots{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #E8D7C3C9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.titleDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    font-size: 24px;
+}
+
+.icon {
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.sliderItem {
+    border-radius: 10px;
+}
