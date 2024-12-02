@@ -1,0 +1,52 @@
+.suppliersContainer{
+    margin-bottom: 100px;
+}
+
+.hero {
+    background-image: url('../image/suppliersHeroBg.png');
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ysabeau Infant", sans-serif;
+}
+
+.title {
+    width: 1000px;
+    z-index: 2;
+}
+
+.text {
+    color: white;
+    font-size: 90px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.categoryContainer{
+    font-family: "Poppins", sans-serif;
+}
+
+.category {
+    display: flex;
+}
+
+.categoryItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.categoryItem img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}

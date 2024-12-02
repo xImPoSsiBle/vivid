@@ -1,0 +1,36 @@
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif; 
+    margin-top: 40px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.element {
+    width: 400px;
+    margin: 0 11px 30px 11px
+}
+
+.element span {
+    display: block;
+}
+
+.titleDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    font-size: 24px;
+}
+
+.icon {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+}

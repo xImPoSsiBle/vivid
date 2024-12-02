@@ -1,0 +1,37 @@
+.container{
+    font-family: "Poppins", sans-serif;
+}
+
+.container h1{
+    font-weight: 500;
+    font-size: 38px;
+    margin-left: 15px;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 11px 30px 11px;
+}
+
+.item span {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.item span:nth-child(3) {
+    font-weight: 600;
+    font-size: 20px;
+}

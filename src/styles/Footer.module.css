@@ -4,6 +4,8 @@
     justify-content: space-around;
     align-items: center;
     background-color: #DEC2A080;
+    font-family: "Poppins", sans-serif;
+
 }
 
 .footerItems{
@@ -12,7 +14,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    font-family: "Poppins", sans-serif;
 }
 
 .footerItems p {
@@ -34,4 +35,15 @@
     border: 1px solid #DEC2A0;
     border-radius: 10px;
     background-color: #fff;
+}
+
+.social span{
+    margin: 0 10px 0 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.socialIcons{
+    display: flex;
+    gap: 10px;
 }

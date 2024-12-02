@@ -1,78 +1,127 @@
 import styles from '../../styles/Home.module.css'
-import CustomSlider from '../CustomSlider'
 
-import Birthday from '../../image/birthday.png'
-import Weeding from '../../image/weeding.png'
-import Corporate from '../../image/corporate.png'
-import Theme from '../../image/theme.png'
+import Bg1 from '../../image/bg1.png'
+import Bg2 from '../../image/bg2.png'
 
-import AstanaNury from '../../image/Nury.png'
-import Aray from '../../image/Aray.png'
-import Deraliye from '../../image/Deraliye.png'
-import Lugano from '../../image/Lugano.png'
+import CategoryBg from '../../image/categoryBg.png'
+import PlaceBg from '../../image/placeBg.png'
+import HelperBg from '../../image/helperBg.png'
 
-import DiscountIcon from '../../image/discountIcon.png'
+import TrustIcon from '../../image/trustIcon.png'
 
-import ReviewIcon1 from '../../image/review1.png'
-import ReviewIcon2 from '../../image/review2.png'
-import ReviewIcon3 from '../../image/review3.png'
-import ReviewIcon4 from '../../image/review4.png'
-import ReviewIcon5 from '../../image/review5.png'
-
+import ReviewIcon1 from '../../image/reviewIcon1.png'
+import ReviewIcon2 from '../../image/reviewIcon2.png'
+import ReviewIcon3 from '../../image/reviewIcon3.png'
 
 const Home = () => {
-    const events = [{ id: 1, name: 'День Рождения', img: Birthday }, { id: 2, name: 'Свадьба', img: Weeding }, { id: 3, name: 'Корпоратив', img: Corporate }, { id: 4, name: 'Тематическая вечеринка', img: Theme }, { id: 5, name: 'День Рождения', img: Birthday }, { id: 6, name: 'Свадьба', img: Weeding }, { id: 7, name: 'Корпоратив', img: Corporate }, { id: 8, name: 'Тематическая вечеринка', img: Theme }, { id: 9, name: 'День Рождения', img: Birthday }, { id: 10, name: 'Свадьба', img: Weeding }, { id: 11, name: 'Корпоратив', img: Corporate }, { id: 12, name: 'Тематическая вечеринка', img: Theme }]
-
-    const popularPlace = [{ id: 1, name: 'Астана Нұры', img: AstanaNury }, { id: 2, name: 'Aray', img: Aray }, { id: 3, name: 'Deraliye', img: Deraliye }, { id: 4, name: 'Lugano', img: Lugano }, { id: 5, name: 'Астана Нұры', img: AstanaNury }, { id: 6, name: 'Aray', img: Aray }, { id: 7, name: 'Deraliye', img: Deraliye }, { id: 8, name: 'Lugano', img: Lugano }, { id: 9, name: 'Астана Нұры', img: AstanaNury }, { id: 10, name: 'Aray', img: Aray }, { id: 11, name: 'Deraliye', img: Deraliye }, { id: 12, name: 'Lugano', img: Lugano }]
-
-    const reviews = [{id: 1, review: '«Я долго думала, как организовать юбилей родителей, чтобы все прошло идеально, и благодарю вас справились всего за пару дней. Понравилось, что все получилось: выбрал ресторан, стильное оформление и добавил несколько необычных идей. Всё получилось даже лучше, чем я ожидала! Спасибо за такую ​​помощь организации!"', name: 'Катя Смирнова', role: 'Организатор', img: ReviewIcon1}, {id: 2, review: '"Очень удобно, что можно сразу подобраться к ресторану, выбрать стиль оформления и количество гостей. Интерфейс понятный, рекомендации по декору просто шикарные! Благодаря этому сайту удалось значительно ускорить процесс подготовки к мероприятию. Спасибо за такой полезный инструмент!"', name: 'Селия Альмеда', role: 'Организатор свадеб', img: ReviewIcon2},{id: 3, review: '"Я часто организую корпоративные мероприятия, и этот проект — находка! Возможность автоматизировать процесс выбора локации и продумать экономию времени. Особенно понравилось, что можно сразу увидеть, как будет выглядеть оформление. Всё четко, профессионально и стильно!"', name: 'Нат Рейнольдс', role: 'HR-менеджер', img: ReviewIcon3},{id: 4, review: '"Искала, как организовать выпускной для сына, и случайно наткнулась на ваш сайт. Все оказалось просто и понятно: выбрали ресторан, стиль вечеринки и даже нашли идею для фотозоны. Праздник получился невероятно красивым, и все благодаря вашему сайту. Удобно, быстро и результат. Рекомендую всем!"', name: 'Анна Келон', role: 'Мать выпускника', img: ReviewIcon4},{id: 5, review: '"Искал способ организовать детский праздник для дочки, и ваш сайт отлично справился с этой штукой. Очень удобно, что можно сразу выбрать место и продумать оформление. Отдельное спасибо за рекомендации по тематике праздника — получилось ярко и весело! Родители тоже оценили"', name: 'Александр Петров', role: 'Помощник организатора', img: ReviewIcon5},]
 
     return (
         <div className={styles.homePage}>
-            <div className={styles.container}>
+            <div className={styles.hero}>
                 <div className={styles.title}>
                     <h1 className={styles.text}>Собирайтесь с близкими ярко и красиво</h1>
                 </div>
-                <div className={styles.inputDiv}>
-                    <select className={styles.select}>
-                        <option>Выбрать категорию</option>
-                        <option>wasd</option>
-                        <option>wasd</option>
-                        <option>wasd</option>
-                    </select>
-                    <input placeholder='Астана' className={styles.input} />
-                    <button className={styles.btn}>Найти</button>
+                <img className={styles.bg1} src={Bg1} alt='icon' />
+                <img className={styles.bg2} src={Bg2} alt='icon' />
+            </div>
+            <div className={styles.about}>
+                <p>
+                    Мы — команда Vivid Occasions , которая помогает превратить организацию мероприятий в простой процесс.
+                </p>
+            </div>
+            <div className={styles.info}>
+                <div className={styles.infoDiv}>
+                    <p>1000</p>
+                    <span>Мероприятий</span>
+                </div>
+                <div className={styles.infoDiv}>
+                    <p>2000</p>
+                    <span>Пользователей</span>
+                </div>
+                <div className={styles.infoDiv}>
+                    <p>100</p>
+                    <span>Проведенных</span>
                 </div>
             </div>
-            <div className={styles.slider}>
-                <CustomSlider title='Предложения по Категориям' count={10} elements={events} />
-                <CustomSlider title='Популярные места' count={100} elements={popularPlace} />
-            </div>
-            <div className={styles.discountContainer}>
-                <div className={styles.discountBg}>
-                    <img src={DiscountIcon} alt='icon' />
-                </div>
-                <div className={styles.discountText}>
-                    <h1>Первое мероприятие со скидкой 20%!</h1>
-                    <p>Новым клиентам предоставляется скидка 20% на первое мероприятие при бронировании через нашу платформу. Отличный способ попробовать наш сервис с выгодой!</p>
-                    <div className={styles.discountBtnDiv}>
-                        <button>Забронировать</button>
+            <div className={styles.choise}>
+                <h1 className={styles.choiseTitle}>Что вы можете выбрать?</h1>
+                <div className={styles.choiseVariants}>
+                    <div>
+                        <img src={CategoryBg} alt='icon' className={styles.choiseImg} />
+                        <p className={styles.choiseText}>Категорию мероприятий</p>
+                    </div>
+                    <div>
+                        <img src={PlaceBg} alt='icon' className={styles.choiseImg} />
+                        <p className={styles.choiseText}>Место проведения</p>
+                    </div>
+                    <div>
+                        <img src={HelperBg} alt='icon' className={styles.choiseImg} />
+                        <p className={styles.choiseText}>Помощников в организации</p>
                     </div>
                 </div>
             </div>
-            <div className={styles.reviewsContainer}>
-                <h1 className={styles.reviewsTitle}>Что говорят наши пользователи?</h1>
-                <div className={styles.reviews}>
-                    {reviews.map(i => {
-                        return (
-                            <div className={styles.reviewCard}>
-                                <span className={styles.review}>{i.review}</span>
-                                <img src={i.img} alt='icon'/>
-                                <h1 className={styles.reviewName}>{i.name}</h1>
-                                <span className={styles.role}>{i.role}</span>
-                            </div>
-                        )
-                    })}
+            <div className={styles.trustSection}>
+                <h1>Доверьтесь нам — и наслаждайтесь своими яркими моментами!</h1>
+                <div className={styles.trustSectionContent}>
+                    <img src={TrustIcon} alt='icon' className={styles.trustIcon} />
+                    <div className={styles.trustSectionText}>
+                        <p>
+                            С нашим приложением вам больше не нужно тратить часы на поиск подходящего места, обсуждение декора, расчет бюджета и выбор фотографа. Мы объединили все необходимые инструменты в одном месте, чтобы вы могли сосредоточиться на самом важном — создании уникальной атмосферы и незабываемых впечатлений для вас и ваших гостей.
+                            <br />
+                            <br />
+                            С нами ваш праздник станет проще в подготовке, а сам процесс — более приятным и вдохновляющим, ведь все заботы о деталях мы берем на себя.
+                        </p>
+
+                        <button className={styles.trustSectionBtn}>Начать создание мероприятия</button>
+                    </div>
+                </div>
+            </div>
+
+            <div className={styles.reviewsSection}>
+                <h1 className={styles.reviewsSectionTitle}>Что говорят наши пользователи?</h1>
+                <div className={styles.reviewsContainer}>
+                    <div className={styles.reviewsDiv}>
+                        <div className={styles.user}>
+                            <img src={ReviewIcon1} alt='icon' className={styles.reviewIcon} />
+                            <span className={styles.username}>
+                                Катя Смирнова
+                            </span>
+                            <span>
+                                Организатор
+                            </span>
+                        </div>
+                        <div className={styles.reviewsText}>
+                            <span>«Я долго думала, как организовать юбилей родителей, чтобы все прошло идеально. Понравилось, что все получилось: выбрал ресторан, стильное оформление и добавил несколько необычных идей. Всё получилось даже лучше, чем я ожидала! Спасибо за такую ​​помощь организации!"</span>
+                        </div>
+                    </div>
+                    <div className={`${styles.reviewsDiv} ${styles.reviewsDivRight}`}>
+                        <div className={styles.reviewsText}>
+                            <span>"Искал способ организовать детский праздник для дочки, и ваш сайт отлично справился с этой штукой. Очень удобно, что можно сразу выбрать место и продумать оформление. Отдельное спасибо за рекомендации по тематике праздника — получилось ярко и весело! Родители тоже оценили"</span>
+                        </div>
+                        <div className={styles.user}>
+                            <img src={ReviewIcon2} alt='icon' className={styles.reviewIcon} />
+                            <span className={styles.username}>
+                                Александр Петров
+                            </span>
+                            <span>
+                                Директор
+                            </span>
+                        </div>
+                    </div>
+                    <div className={styles.reviewsDiv}>
+                        <div className={styles.user}>
+                            <img src={ReviewIcon3} alt='icon' className={styles.reviewIcon} />
+                            <span className={styles.username}>
+                                Селия Альмеда
+                            </span>
+                            <span>
+                                Организатор свадеб
+                            </span>
+                        </div>
+                        <div className={styles.reviewsText}>
+                            <span>"Очень удобно, что можно сразу подобраться к ресторану, выбрать стиль оформления и количество гостей. Интерфейс понятный, рекомендации по декору просто шикарные! Благодаря этому сайту удалось значительно ускорить процесс подготовки к мероприятию. Спасибо за такой полезный инструмент!"</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

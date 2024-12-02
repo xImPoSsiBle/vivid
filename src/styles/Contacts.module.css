@@ -1,0 +1,67 @@
+.hero {
+    background-image: url('../image/contact/contactHeroBg.png');
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ysabeau Infant", sans-serif;
+}
+
+.title {
+    width: 435px;
+    z-index: 2;
+}
+
+.text {
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.text span {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 60px auto 100px;
+    font-family: "Poppins", sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.form label {
+    font-size: 24px;
+}
+
+.input {
+    width: 500px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 24px;
+    padding: 0 10px;
+    border: 1px solid #ACACAC;
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+}
+
+.message {
+    height: 250px ;
+}
+
+.btn {
+    width: 520px;
+    height: 50px;
+    font-size: 24px;
+    border: 1px solid #DEC2A0;
+    border-radius: 10px;
+    background-color: #DEC2A0;
+    color: white;
+}

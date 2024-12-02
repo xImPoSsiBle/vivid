@@ -1,0 +1,99 @@
+.hero {
+    background-image: url('../image/placesHeroBg.png');
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ysabeau Infant", sans-serif;
+}
+
+.title {
+    width: 1000px;
+    z-index: 2;
+}
+
+.text {
+    color: white;
+    font-size: 90px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.inputDiv {
+    display: flex;
+    justify-self: center;
+}
+
+.input {
+    width: 250px;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #ACACAC;
+    border-radius: 10px;
+    margin: 20px 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+.findBtn {
+    background-color: #DEC2A0;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.discountContainer {
+    max-width: 1300px;
+    height: 400px;
+    margin: 110px auto 100px;
+    background-color: #F2EDE7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discountBg {
+    width: 300px;
+    height: 300px;
+    background-image: url('../image/discountBg.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discountBg img {
+    width: 300px;
+    height: 300px;
+}
+
+.discountText {
+    margin-left: 40px;
+}
+
+.discountText h1 {
+    font-size: 50px;
+    margin: 0 0 15px 0;
+}
+
+.discountText p {
+    width: 850px;
+    font-size: 40px;
+    margin: 0;
+}
+
+.discountBtnDiv {
+    display: flex;
+    justify-content: end;
+}
+
+.discountBtnDiv button {
+    width: 280px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #DEC2A0;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}

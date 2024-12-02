@@ -1,28 +1,45 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Logo from '../image/logo.png'
 import DownArrow from '../image/downArrow.png'
 
 import styles from '../styles/Header.module.css'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const [activeNav, setActiveNav] = useState('Главная')
+    const navigate = useNavigate()
+    const location = useLocation()
 
-    const navsTitle = ['Главная', 'Места', 'Поставщики', 'О нас', 'Контакты']
+    const navsTitle = [
+        { path: '/', name: 'Главная' },
+        { path: '/places', name: 'Места' },
+        { path: '/suppliers', name: 'Поставщики' },
+        { path: '/about', name: 'О нас' },
+        { path: '/contacts', name: 'Контакты' }
+    ]
+
+    useEffect(() => {
+        const currentNav = navsTitle.find(nav => nav.path === location.pathname)
+        if (currentNav) {
+            setActiveNav(currentNav.name)
+        }
+    }, [location.pathname])
 
     const handleNavClick = (nav) => {
-        setActiveNav(nav)
+        setActiveNav(nav.name)
+        navigate(nav.path)
     }
 
     return (
         <div className={styles.header}>
             <div>
-                <img src={Logo} className={styles.logo} alt='logo'/>
+                <img src={Logo} className={styles.logo} alt='logo' />
             </div>
             <div className={styles.nav}>
                 <div className={styles.loginDiv}>
                     <div className={styles.language}>
                         РУС
-                        <img src={DownArrow} className={styles.arrow} alt='icon'/>
+                        <img src={DownArrow} className={styles.arrow} alt='icon' />
                     </div>
                     <div className={styles.authBtnsDiv}>
                         <div>ВХОД</div>
@@ -33,10 +50,10 @@ const Header = () => {
                     {navsTitle.map(i => {
                         return (
                             <nav
-                                key={i}
-                                className={`${styles.navLink} ${activeNav === i && styles.active}`}
+                                key={i.name}
+                                className={`${styles.navLink} ${activeNav === i.name && styles.active}`}
                                 onClick={() => handleNavClick(i)}>
-                                {i}
+                                {i.name}
                             </nav>
                         )
                     })}
