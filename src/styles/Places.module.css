@@ -1,6 +1,6 @@
 .hero {
     background-image: url('../image/placesHeroBg.png');
-    height: 540px;
+    height: 405px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,12 +26,12 @@
 }
 
 .input {
-    width: 250px;
-    height: 50px;
+    width: 212.25px;
+    height: 61.5px;
     padding: 0 10px;
     border: 1px solid #ACACAC;
-    border-radius: 10px;
-    margin: 20px 10px;
+    border-radius: 7.5px;
+    margin: 20px 6px;
     box-sizing: border-box;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
@@ -45,7 +45,7 @@
 }
 
 .discountContainer {
-    max-width: 1300px;
+    max-width: 1128px;
     height: 400px;
     margin: 110px auto 100px;
     background-color: #F2EDE7;
@@ -55,8 +55,8 @@
 }
 
 .discountBg {
-    width: 300px;
-    height: 300px;
+    width: 297px;
+    height: 297px;
     background-image: url('../image/discountBg.png');
     display: flex;
     align-items: center;
@@ -64,8 +64,8 @@
 }
 
 .discountBg img {
-    width: 300px;
-    height: 300px;
+    width: 297px;
+    height: 297px;
 }
 
 .discountText {
@@ -73,14 +73,17 @@
 }
 
 .discountText h1 {
-    font-size: 50px;
+    font-size: 36px;
+    line-height: 46.58px;
     margin: 0 0 15px 0;
+    font-family: "PT Sans Caption", sans-serif;
 }
 
 .discountText p {
-    width: 850px;
-    font-size: 40px;
+    width: 652.5px;
+    font-size: 36px;
     margin: 0;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 .discountBtnDiv {
@@ -89,8 +92,8 @@
 }
 
 .discountBtnDiv button {
-    width: 280px;
-    height: 50px;
+    width: 218.25px;
+    height: 52.17px;
     font-size: 20px;
     background-color: #DEC2A0;
     border: none;

@@ -1,10 +1,11 @@
 .container{
     font-family: "Poppins", sans-serif;
+    margin-top: 115px;
 }
 
 .container h1{
     font-weight: 500;
-    font-size: 38px;
+    font-size: 22.5px;
     margin-left: 15px;
 }
 
@@ -15,7 +16,8 @@
 }
 
 .icon {
-    width: 300px;
+    width: 264px;
+    height: 252px;
     margin-bottom: 15px;
 }
 
@@ -28,10 +30,10 @@
 
 .item span {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .item span:nth-child(3) {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 21px;
 }

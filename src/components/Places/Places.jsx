@@ -30,8 +30,10 @@ import Theme5 from '../../image/ThematicIcons/theme5.png'
 import Theme6 from '../../image/ThematicIcons/theme6.png'
 
 import DiscountIcon from '../../image/discountIcon.png'
+import { useEffect, useState } from 'react'
 
 const Places = () => {
+    const [photo, setPhoto] = useState('')
 
     const birthday = [{ id: 1, name: 'Uchquduq', seats: 310, img: Birthday1 }, { id: 2, name: 'Admiral Pub & Karaoke', seats: 80, img: Birthday2 }, { id: 3, name: 'MILLIONAIRE', seats: 100, img: Birthday3 }, { id: 4, name: 'MANSION', seats: 120, img: Birthday4 }, { id: 5, name: 'Turandot', seats: 80, img: Birthday5 }, { id: 6, name: 'Mary Express', seats: 50, img: Birthday6 },]
 
@@ -40,13 +42,29 @@ const Places = () => {
     const corporate = [{ id: 1, name: 'FIESTA HALL', seats: 500, img: Corporate1 }, { id: 2, name: 'GRAND HALL ARAY', seats: 260, img: Corporate2 }, { id: 3, name: 'Portofino', seats: 300, img: Corporate3 }, { id: 4, name: 'Традициональ', seats: 120, img: Corporate4 }, { id: 5, name: 'El-Plaza', seats: 300, img: Corporate5 }, { id: 6, name: 'Mahabbat Hall', seats: 250, img: Corporate6 },]
 
     const thematic = [{ id: 1, name: 'FIESTA HALL', seats: 500, img: Theme1 }, { id: 2, name: 'GRAND HALL ARAY', seats: 260, img: Theme2 }, { id: 3, name: 'Portofino', seats: 300, img: Theme3 }, { id: 4, name: 'Традициональ', seats: 120, img: Theme4 }, { id: 5, name: 'El-Plaza', seats: 300, img: Theme5 }, { id: 6, name: 'Рыба Пила', seats: 250, img: Theme6 },]
+    
+    // useEffect(() => {
+    //     const getData = async () => {
+    //         const response = await fetch('http://192.168.2.248:8000/event/events/4', {
+    //             method: 'GET',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             },
+    //         })
+    //         const data = await response.json()
+    //         setPhoto(data.photo)
+    //         console.log(data)
+    //     }
+
+    //     getData()
+    // }, [])
 
     return (
         <div className={styles.placesContainer}>
             <div className={styles.hero}>
                 <div className={styles.title}>
                     <h1 className={styles.text}>Предложения по ресторанам</h1>
-                </div>
+                </div> 
             </div>
             <div className={styles.inputDiv}>
                 <input className={styles.input} type="text" placeholder='Количество гостей' />

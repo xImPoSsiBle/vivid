@@ -42,8 +42,8 @@ const Header = () => {
                         <img src={DownArrow} className={styles.arrow} alt='icon' />
                     </div>
                     <div className={styles.authBtnsDiv}>
-                        <div>ВХОД</div>
-                        <div className={styles.signUp}>РЕГИСТРАЦИЯ</div>
+                        <div onClick={() => navigate('/login')}>ВХОД</div>
+                        <div className={styles.signUp} onClick={() => navigate('/register')}>РЕГИСТРАЦИЯ</div>
                     </div>
                 </div>
                 <div className={styles.navLinkDiv}>

@@ -4,7 +4,7 @@
 
 .hero {
     background-image: url('../image/suppliersHeroBg.png');
-    height: 540px;
+    height: 405px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,12 +25,18 @@
 }
 
 .content {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .categoryContainer{
     font-family: "Poppins", sans-serif;
+}
+
+.categoryContainer h1 {
+    font-size: 22.5px;
+    font-weight: 500;
+    margin: 45px 0;
 }
 
 .category {
@@ -41,12 +47,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 20px;
+    margin-right: 120px;
     cursor: pointer;
 }
 
 .categoryItem img {
-    width: 120px;
-    height: 120px;
+    width: 112.5px;
+    height: 112.5px;
     border-radius: 50%;
+}
+
+.categoryItem p {
+    font-size: 18px;
+    font-weight: 500;
 }

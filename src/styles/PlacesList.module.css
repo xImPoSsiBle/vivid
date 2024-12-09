@@ -1,19 +1,22 @@
 .wrapper {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     font-family: "Poppins", sans-serif; 
     margin-top: 40px;
 }
 
 .container {
+    max-width: 1200;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: 10px;
 }
 
 .element {
-    width: 400px;
-    margin: 0 11px 30px 11px
+    width: 366px;
+    margin: 0 13px 30px 13px
 }
 
 .element span {
@@ -21,8 +24,10 @@
 }
 
 .titleDiv{
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .title{
@@ -30,7 +35,7 @@
 }
 
 .icon {
-    width: 400px;
-    height: 200px;
+    width: 363.75px;
+    height: 252px;
     border-radius: 10px;
 }

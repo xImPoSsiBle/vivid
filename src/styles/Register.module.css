@@ -1,0 +1,82 @@
+.registerPage {
+    background-color: #F2EDE7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.logo {
+    width: 455.18px;
+    height: 551.25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 502.5px;
+    height: 618px;
+    border-radius: 15px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formGroup input {
+    width: 411.75px;
+    height: 30.75px;
+    border-radius: 3.75px;
+    border: 0.75px solid #79655E;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.formGroup label {
+    margin-bottom: 3.75px;
+}
+
+.registerBtn {
+    width: 232.5px;
+    height: 33.75px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: none;
+    background-color: #79655E;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: "Barlow", sans-serif;
+    line-height: 18px;
+}
+
+.loginLink {
+    position: absolute;
+    top: 38.25px;
+    left: 48.75px;
+    color: #79655E;
+}
+
+.loginLink a {
+    width: 80%;
+    color: #79655E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    right: 5px;
+}

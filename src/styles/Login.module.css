@@ -1,0 +1,158 @@
+.logoPage {
+    background-color: #F2EDE7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.logo {
+    width: 455.18px;
+    height: 551.25px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 30px;
+    color: #79655E;
+}
+
+.checkbox {
+    width: 22.5px;
+    height: 22.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    margin-right: 8.25px;
+}
+
+.checked {
+    background-color: #999999;
+    width: 15.5px;
+    height: 15.5px;
+    border-radius: 50%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 499.5px;
+    height: 440.25px;
+    border-radius: 15px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputDiv {
+    display: flex;
+}
+
+.inputDiv input {
+    width: 386.25px;
+    height: 30.75px;
+    border-radius: 3.75px;
+    border: 0.75px solid #79655E;
+    margin-top: 15px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    color: #79655E;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.password {
+    padding-right: 30px;
+}
+
+.icon {
+    position: absolute;
+    top: 248px;
+    left: 900px;
+}
+
+.secure {
+    top: 290px;
+    left: 897px;
+}
+
+.eye {
+    position: absolute;
+    top: 290px;
+    left: 1230px;
+    cursor: pointer;
+}
+
+.rememberDiv {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+}
+
+.rememberDiv a{
+    color: #888888;
+}
+
+.rememberDiv label {
+    color: #999999;
+    text-decoration: underline;
+}
+
+.buttons {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons button {
+    width: 333px;
+    height: 43.5px;
+    background-color: #79655E;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    margin-top: 16px;
+}
+
+.line {
+    width: 337.5px;
+    border: 1.5px solid #EEEEEE;
+    margin-top: 29.25px;
+}
+
+.registerLink {
+    width: 390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #888888;
+    margin-top: 33px;
+}
+
+.registerLink a {
+    color: #79655E;
+}

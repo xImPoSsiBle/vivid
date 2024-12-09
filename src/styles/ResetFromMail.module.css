@@ -1,0 +1,99 @@
+.PasswordResetPage {
+    background-color: #F2EDE7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+.form h1 {
+    color: #79655E;
+    font-family: "inter", sans-serif;
+    font-weight: 400;
+    margin-top: 33.75px;
+}
+
+.container {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Barlow", sans-serif;
+}
+
+.logo {
+    width: 455.18px;
+    height: 551.25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 468.75px;
+    height: 369px;
+    border-radius: 15px;
+    color: #79655E;
+}
+
+.form h1 {
+    margin-top: 33.75px;
+    margin-bottom: 5px;
+}
+
+.description {
+    width: 307.5px;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    color: #777777;
+    text-align: center;
+}
+
+.inputDiv input {
+    width: 307.5px;
+    height: 30.75px;
+    border-radius: 3.75px;
+    border: 0.75px solid #79655E;
+    margin-top: 15px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    color: #79655E;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 37.75px;
+}
+
+.icon {
+    position: absolute;
+    top: 350px;
+    left: 946px;
+}
+
+.btn {
+    width: 333px;
+    height: 43.5px;
+    margin-top: 36px;
+    border-radius: 15px;
+    border: none;
+    background-color: #79655E;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+.line {
+    width: 337.5px;
+    border: 1.5px solid #EEEEEE;
+    margin-top: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
