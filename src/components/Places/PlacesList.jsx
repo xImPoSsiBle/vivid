@@ -1,6 +1,11 @@
 import styles from "../../styles/PlacesList.module.css";
 
-const PlaceRender = ({ title, count, elements }) => {
+const PlaceList = ({ title, count, elements, setIsModalOpen, setSelectedPlaceId }) => {
+
+    const handleClick = (id) => {
+        setIsModalOpen(true)
+        setSelectedPlaceId(id)
+    }
 
     return (
         <div className={styles.wrapper}>
@@ -11,12 +16,12 @@ const PlaceRender = ({ title, count, elements }) => {
             <div className={styles.container}>
                 {elements.map(i => {
                     return (
-                        <div key={i.id} className={styles.element}>
-                            <img src={i.img} alt="icon" className={styles.icon} />
-                            <span>{i.name}</span>
-                            <span>★★★★★ 5 (22)</span>
-                            <span>{i.seats} мест</span>
-                        </div>
+                            <div key={i.id} className={styles.element} onClick={() => handleClick(i.id)}>
+                                <img src={i.photo} alt="icon" className={styles.icon} />
+                                <span>{i.name}</span>
+                                <span>★★★★★ 5 (22)</span>
+                                <span>{i.seats} мест</span>
+                            </div>
                     )
                 })}
             </div>
@@ -25,4 +30,4 @@ const PlaceRender = ({ title, count, elements }) => {
     );
 };
 
-export default PlaceRender;
+export default PlaceList;

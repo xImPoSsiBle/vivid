@@ -27,6 +27,7 @@
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
 }
 
@@ -38,4 +39,9 @@
     width: 363.75px;
     height: 252px;
     border-radius: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }

@@ -11,28 +11,61 @@ import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import PasswordReset from "./components/Auth/PasswordReset";
 import ResetFromMail from "./components/Auth/ResetFromMail";
-import ResetFromNumber from "./components/Auth/ResetFromNumber";
+import NewPassword from "./components/Auth/NewPassword";
+import { useState } from "react";
+import Profile from "./components/Profile/Profile";
+import PlaceModal from "./components/Modals/PlaceModal";
+import ReservationModal from "./components/Modals/ReservationModal";
+import SuccessModal from "./components/Modals/SuccessModal";
+import CancelModal from "./components/Modals/CancelModal";
 
 function App() {
+  const [isAuth, setIsAuth] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [reservationModal, setReservationModal] = useState(false);
+  const [isSuccessModal, setIsSuccessModal] = useState(false);
+  const [isCancelModal, setIsCancelModal] = useState(false);
+  const [selectedPlaceId, setSelectedPlaceId] = useState(null);
+  const [selectedPlacePrice, setSelectedPlacePrice] = useState(null);
+
   const location = useLocation();
 
-  const isLoginPage = location.pathname === "/login" || location.pathname === "/register" || location.pathname === "/password-reset" || location.pathname === "/reset-from-mail" || location.pathname === "/reset-from-number";
+  const isLoginPage = location.pathname === "/login" || location.pathname === "/register" || location.pathname === "/password-reset" || location.pathname === "/reset-from-mail" || location.pathname === "/reset-from-number" || location.pathname === "/new-password";
 
   return (
     <div className="App">
-      {!isLoginPage && <Header />}
+      {!isLoginPage && <Header isAuth={isAuth} setIsAuth={setIsAuth} />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/places" element={<Places />} />
+        <Route path="/places" element={<Places setIsModalOpen={setIsModalOpen} setSelectedPlaceId={setSelectedPlaceId} />} />
         <Route path="/suppliers" element={<Suppliers />} />
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
+        <Route path="/register" element={<Register setIsAuth={setIsAuth} />} />
         <Route path="/password-reset" element={<PasswordReset />} />
         <Route path="/reset-from-mail" element={<ResetFromMail />} />
-        <Route path="/reset-from-number" element={<ResetFromNumber />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/new-password" element={<NewPassword />} />
       </Routes>
+      {isModalOpen
+        && <PlaceModal
+          setIsModalOpen={setIsModalOpen}
+          setReservationModal={setReservationModal}
+          selectedPlaceId={selectedPlaceId}
+          setSelectedPlacePrice={setSelectedPlacePrice}
+        />}
+      {reservationModal
+        && <ReservationModal
+          setReservationModal={setReservationModal}
+          setIsSuccessModal={setIsSuccessModal}
+          selectedPlacePrice={selectedPlacePrice}
+        />}
+      {isSuccessModal
+        && <SuccessModal
+          setIsSuccessModal={setIsSuccessModal}
+          setIsCancelModal={setIsCancelModal} />}
+      {isCancelModal && <CancelModal setIsCancelModal={setIsCancelModal} />}
       {!isLoginPage && <Footer />}
     </div>
   );

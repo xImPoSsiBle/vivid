@@ -1,70 +1,47 @@
 import styles from '../../styles/Places.module.css'
-import PlaceRender from './PlacesList'
-
-import Birthday1 from '../../image/birthdayIcons/birthday1.png'
-import Birthday2 from '../../image/birthdayIcons/birthday2.png'
-import Birthday3 from '../../image/birthdayIcons/birthday3.png'
-import Birthday4 from '../../image/birthdayIcons/birthday4.png'
-import Birthday5 from '../../image/birthdayIcons/birthday5.png'
-import Birthday6 from '../../image/birthdayIcons/birthday6.png'
-
-import Weeding1 from '../../image/weedingIcons/weeding1.png'
-import Weeding2 from '../../image/weedingIcons/weeding2.png'
-import Weeding3 from '../../image/weedingIcons/weeding3.png'
-import Weeding4 from '../../image/weedingIcons/weeding4.png'
-import Weeding5 from '../../image/weedingIcons/weeding5.png'
-import Weeding6 from '../../image/weedingIcons/weeding6.png'
-
-import Corporate1 from '../../image/corporateIcons/corporate1.png'
-import Corporate2 from '../../image/corporateIcons/corporate2.png'
-import Corporate3 from '../../image/corporateIcons/corporate3.png'
-import Corporate4 from '../../image/corporateIcons/corporate4.png'
-import Corporate5 from '../../image/corporateIcons/corporate5.png'
-import Corporate6 from '../../image/corporateIcons/corporate6.png'
-
-import Theme1 from '../../image/ThematicIcons/theme1.png'
-import Theme2 from '../../image/ThematicIcons/theme2.png'
-import Theme3 from '../../image/ThematicIcons/theme3.png'
-import Theme4 from '../../image/ThematicIcons/theme4.png'
-import Theme5 from '../../image/ThematicIcons/theme5.png'
-import Theme6 from '../../image/ThematicIcons/theme6.png'
+import PlaceList from './PlacesList'
 
 import DiscountIcon from '../../image/discountIcon.png'
 import { useEffect, useState } from 'react'
 
-const Places = () => {
-    const [photo, setPhoto] = useState('')
+const Places = ({ setIsModalOpen, setSelectedPlaceId }) => {
+    const [birthday, setBirthday] = useState([]);
+    const [wedding, setWedding] = useState([]);
+    const [corporate, setCorporate] = useState([]);
+    const [party, setParty] = useState([]);
 
-    const birthday = [{ id: 1, name: 'Uchquduq', seats: 310, img: Birthday1 }, { id: 2, name: 'Admiral Pub & Karaoke', seats: 80, img: Birthday2 }, { id: 3, name: 'MILLIONAIRE', seats: 100, img: Birthday3 }, { id: 4, name: 'MANSION', seats: 120, img: Birthday4 }, { id: 5, name: 'Turandot', seats: 80, img: Birthday5 }, { id: 6, name: 'Mary Express', seats: 50, img: Birthday6 },]
+    // const birthday = [{ id: 1, name: 'Uchquduq', seats: 310, img: Birthday1 }, { id: 2, name: 'Admiral Pub & Karaoke', seats: 80, img: Birthday2 }, { id: 3, name: 'MILLIONAIRE', seats: 100, img: Birthday3 }, { id: 4, name: 'MANSION', seats: 120, img: Birthday4 }, { id: 5, name: 'Turandot', seats: 80, img: Birthday5 }, { id: 6, name: 'Mary Express', seats: 50, img: Birthday6 },]
 
-    const weeding = [{ id: 1, name: 'FIESTA HALL', seats: 500, img: Weeding1 }, { id: 2, name: 'GRAND HALL ARAY', seats: 260, img: Weeding2 }, { id: 3, name: 'Portofino', seats: 300, img: Weeding3 }, { id: 4, name: 'Традициональ', seats: 120, img: Weeding4 }, { id: 5, name: 'El-Plaza', seats: 300, img: Weeding5 }, { id: 6, name: 'Mahabbat Hall', seats: 250, img: Weeding6 },]
+    // const weeding = [{ id: 1, name: 'FIESTA HALL', seats: 500, img: Weeding1 }, { id: 2, name: 'GRAND HALL ARAY', seats: 260, img: Weeding2 }, { id: 3, name: 'Portofino', seats: 300, img: Weeding3 }, { id: 4, name: 'Традициональ', seats: 120, img: Weeding4 }, { id: 5, name: 'El-Plaza', seats: 300, img: Weeding5 }, { id: 6, name: 'Mahabbat Hall', seats: 250, img: Weeding6 },]
 
-    const corporate = [{ id: 1, name: 'FIESTA HALL', seats: 500, img: Corporate1 }, { id: 2, name: 'GRAND HALL ARAY', seats: 260, img: Corporate2 }, { id: 3, name: 'Portofino', seats: 300, img: Corporate3 }, { id: 4, name: 'Традициональ', seats: 120, img: Corporate4 }, { id: 5, name: 'El-Plaza', seats: 300, img: Corporate5 }, { id: 6, name: 'Mahabbat Hall', seats: 250, img: Corporate6 },]
+    // const corporate = [{ id: 1, name: 'FIESTA HALL', seats: 500, img: Corporate1 }, { id: 2, name: 'GRAND HALL ARAY', seats: 260, img: Corporate2 }, { id: 3, name: 'Portofino', seats: 300, img: Corporate3 }, { id: 4, name: 'Традициональ', seats: 120, img: Corporate4 }, { id: 5, name: 'El-Plaza', seats: 300, img: Corporate5 }, { id: 6, name: 'Mahabbat Hall', seats: 250, img: Corporate6 },]
 
-    const thematic = [{ id: 1, name: 'FIESTA HALL', seats: 500, img: Theme1 }, { id: 2, name: 'GRAND HALL ARAY', seats: 260, img: Theme2 }, { id: 3, name: 'Portofino', seats: 300, img: Theme3 }, { id: 4, name: 'Традициональ', seats: 120, img: Theme4 }, { id: 5, name: 'El-Plaza', seats: 300, img: Theme5 }, { id: 6, name: 'Рыба Пила', seats: 250, img: Theme6 },]
-    
-    // useEffect(() => {
-    //     const getData = async () => {
-    //         const response = await fetch('http://192.168.2.248:8000/event/events/4', {
-    //             method: 'GET',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //         })
-    //         const data = await response.json()
-    //         setPhoto(data.photo)
-    //         console.log(data)
-    //     }
+    // const thematic = [{ id: 1, name: 'FIESTA HALL', seats: 500, img: Theme1 }, { id: 2, name: 'GRAND HALL ARAY', seats: 260, img: Theme2 }, { id: 3, name: 'Portofino', seats: 300, img: Theme3 }, { id: 4, name: 'Традициональ', seats: 120, img: Theme4 }, { id: 5, name: 'El-Plaza', seats: 300, img: Theme5 }, { id: 6, name: 'Рыба Пила', seats: 250, img: Theme6 },]
 
-    //     getData()
-    // }, [])
+    useEffect(() => {
+        const getData = async () => {
+            const response = await fetch('https://ditcn7.pythonanywhere.com/event/events', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+            const data = await response.json()
+            setBirthday(data.filter(i => i.event_category === 'birthday'))
+            setWedding(data.filter(i => i.event_category === 'wedding'))
+            setCorporate(data.filter(i => i.event_category === "conference"))
+            setParty(data.filter(i => i.event_category === 'party'))
+        }
+
+        getData()
+    }, [])
 
     return (
         <div className={styles.placesContainer}>
             <div className={styles.hero}>
                 <div className={styles.title}>
                     <h1 className={styles.text}>Предложения по ресторанам</h1>
-                </div> 
+                </div>
             </div>
             <div className={styles.inputDiv}>
                 <input className={styles.input} type="text" placeholder='Количество гостей' />
@@ -86,13 +63,13 @@ const Places = () => {
                 <button className={`${styles.input} ${styles.findBtn}`}>Найти</button>
             </div>
 
-            <PlaceRender elements={birthday} title='Дни Рождения' count={22} />
+            <PlaceList elements={birthday} title='Дни Рождения' count={22} setIsModalOpen={setIsModalOpen} setSelectedPlaceId={setSelectedPlaceId} />
 
-            <PlaceRender elements={weeding} title='Свадебные мероприятия' count={22} />
+            <PlaceList elements={wedding} title='Свадебные мероприятия' count={22} setIsModalOpen={setIsModalOpen} setSelectedPlaceId={setSelectedPlaceId} />
 
-            <PlaceRender elements={corporate} title='Корпоратив' count={22} />
+            <PlaceList elements={corporate} title='Корпоратив' count={22} setIsModalOpen={setIsModalOpen} setSelectedPlaceId={setSelectedPlaceId} />
 
-            <PlaceRender elements={thematic} title='Тематические вечеринки' count={22} />
+            <PlaceList elements={party} title='Тематические вечеринки' count={22} setIsModalOpen={setIsModalOpen} setSelectedPlaceId={setSelectedPlaceId} />
 
             <div className={styles.discountContainer}>
                 <div className={styles.discountBg}>

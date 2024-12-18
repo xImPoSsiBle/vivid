@@ -13,6 +13,10 @@ import ReviewIcon1 from '../../image/reviewIcon1.png'
 import ReviewIcon2 from '../../image/reviewIcon2.png'
 import ReviewIcon3 from '../../image/reviewIcon3.png'
 
+import { Link } from 'react-router-dom';
+
+
+
 const Home = () => {
 
     return (
@@ -47,15 +51,21 @@ const Home = () => {
                 <h1 className={styles.choiseTitle}>Что вы можете выбрать?</h1>
                 <div className={styles.choiseVariants}>
                     <div>
+                    <Link to={"/places"}>
                         <img src={CategoryBg} alt='icon' className={styles.choiseImg} />
+                        </Link>
                         <p className={styles.choiseText}>Категорию мероприятий</p>
                     </div>
                     <div>
+                        <Link to={"/places"}>
                         <img src={PlaceBg} alt='icon' className={styles.choiseImg} />
+                        </Link>
                         <p className={styles.choiseText}>Место проведения</p>
                     </div>
                     <div>
+                        <Link to={"/places"}>
                         <img src={HelperBg} alt='icon' className={styles.choiseImg} />
+                        </Link>
                         <p className={styles.choiseText}>Помощников в организации</p>
                     </div>
                 </div>
@@ -72,7 +82,10 @@ const Home = () => {
                             С нами ваш праздник станет проще в подготовке, а сам процесс — более приятным и вдохновляющим, ведь все заботы о деталях мы берем на себя.
                         </p>
 
+                        <Link to={"/places"}>
                         <button className={styles.trustSectionBtn}>Начать создание мероприятия</button>
+                        </Link>
+                       
                     </div>
                 </div>
             </div>

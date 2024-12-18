@@ -82,18 +82,18 @@
 
 .icon {
     position: absolute;
-    top: 248px;
+    top: 230px;
     left: 900px;
 }
 
 .secure {
-    top: 290px;
+    top: 273px;
     left: 897px;
 }
 
 .eye {
     position: absolute;
-    top: 290px;
+    top: 273px;
     left: 1230px;
     cursor: pointer;
 }

@@ -5,7 +5,7 @@ import DownArrow from '../image/downArrow.png'
 import styles from '../styles/Header.module.css'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ isAuth, setIsAuth }) => {
     const [activeNav, setActiveNav] = useState('Главная')
     const navigate = useNavigate()
     const location = useLocation()
@@ -42,8 +42,24 @@ const Header = () => {
                         <img src={DownArrow} className={styles.arrow} alt='icon' />
                     </div>
                     <div className={styles.authBtnsDiv}>
-                        <div onClick={() => navigate('/login')}>ВХОД</div>
-                        <div className={styles.signUp} onClick={() => navigate('/register')}>РЕГИСТРАЦИЯ</div>
+                        {isAuth ? (
+                            <>
+                                <div onClick={() => {
+                                    setIsAuth(false); // Логаут
+                                    navigate('/login'); // Переход на страницу логина
+                                }}>
+                                    ВЫЙТИ
+                                </div>
+                                <div className={styles.signUp} onClick={() => navigate('/profile')}>
+                                    Профиль
+                                </div>
+                            </>
+                        ) : (<>
+                            <div onClick={() => navigate('/login')}>ВХОД</div>
+                            <div className={styles.signUp} onClick={() => navigate('/register')}>РЕГИСТРАЦИЯ</div>
+                        </>
+                        )}
+
                     </div>
                 </div>
                 <div className={styles.navLinkDiv}>
@@ -59,7 +75,7 @@ const Header = () => {
                     })}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

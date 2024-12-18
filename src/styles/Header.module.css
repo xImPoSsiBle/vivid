@@ -8,8 +8,8 @@
 }
 
 .logo {
-    width: 283.5px;
-    height: 81px;
+    width: 355.5px;
+    height: 90px;
     margin-top: 20px;
 }
 
@@ -32,6 +32,7 @@
     align-items: center;
     font-weight: 500;
     font-size: 15px;
+    cursor: pointer
 }
 
 .signUp {
